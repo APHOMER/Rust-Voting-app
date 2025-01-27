@@ -2,7 +2,8 @@
 
 use anchor_lang::prelude::*;
 
-declare_id!("AyD5wnZEk5po81hTJBG8LxVRHb7GdewWUVhVHv24dm3");
+declare_id!("coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF");
+// declare_id!("AyD5wnZEk5po81hTJBG8LxVRHb7GdewWUVhVHv24dm3");
 
 #[program]
 pub mod votingapp {
@@ -32,7 +33,7 @@ pub struct InitializePoll<'info> {
     #[account(mut)]
     pub signer: Signer<'info>,
     #[account(
-        init,
+        init, // TO INITIALIZE ACCOUNT AUTOMATICALLY
         payer = signer,
         space = 8 + Poll::INIT_SPACE,
         seeds = [poll_id.to_le_bytes().as_ref()],

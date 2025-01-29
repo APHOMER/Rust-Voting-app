@@ -26,7 +26,7 @@ pub mod votingapp {
         Ok(())
     }
 }
-
+// 1
 #[derive(Accounts)]
 #[instruction(poll_id: u64)]
 pub struct InitializePoll<'info> {
@@ -43,7 +43,7 @@ pub struct InitializePoll<'info> {
 
     pub system_program: Program<'info, System>,
 }
-
+// 2
 #[account]
 #[derive(InitSpace)]
 pub struct Poll {
